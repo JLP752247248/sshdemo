@@ -115,6 +115,13 @@
       <artifactId>spring-security-taglibs</artifactId>
       <version>${security.version}</version>
     </dependency>
+    
+    
+    <dependency>
+		<groupId>org.springframework</groupId>
+	  	<artifactId>spring-test</artifactId>
+	  	<version>3.2.0.RELEASE</version>
+	</dependency>
         <!-- hibernate需要的jar包 -->  
         <dependency>  
             <groupId>org.hibernate</groupId>  

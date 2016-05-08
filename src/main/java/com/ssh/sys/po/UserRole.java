@@ -1,5 +1,6 @@
 package com.ssh.sys.po;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,17 +18,20 @@ public class UserRole {
 
 	@Id
 	@Column(name="USERROLEID")
-	@GenericGenerator(name="hibernate-uuid", strategy="uuid")  
-    @GeneratedValue(generator="hibernate-uuid")  
+	/*@GenericGenerator(name="hibernate-uuid", strategy="uuid")  
+    @GeneratedValue(generator="hibernate-uuid")*/  
 	private String userRoleId;
-	@ManyToOne
+	@ManyToOne(cascade={CascadeType.ALL})
 	@JoinColumn(name="userId")
 	@JSONField(serialize=false)
 	private UserInfo userInfo;
+	
 	@ManyToOne
 	@JoinColumn(name="roleId")
 	@JSONField(serialize=false)
 	private RoleInfo roleInfo;
+	
+	
 	public String getUserRoleId() {
 		return userRoleId;
 	}

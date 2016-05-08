@@ -23,4 +23,13 @@ public class RoleInfo {
 	
 	@Column(name="ENABLE")
 	private int enable;
+
+	public RoleInfo(String roleId, String roleName, int enable) {
+		super();
+		this.roleId = roleId;
+		this.roleName = roleName;
+		this.enable = enable;
+	}
+	
+	
 }

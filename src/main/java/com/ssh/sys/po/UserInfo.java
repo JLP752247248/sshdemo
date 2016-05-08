@@ -28,8 +28,8 @@ public class UserInfo implements Serializable{
 
 	@Id
 	@Column(name="USERID")
-	@GenericGenerator(name="hibernate-uuid", strategy="uuid")  
-    @GeneratedValue(generator="hibernate-uuid")  
+	/*@GenericGenerator(name="hibernate-uuid", strategy="uuid")  
+    @GeneratedValue(generator="hibernate-uuid")  */
 	private String userId;
 	
 	@Column(name="USERNAME")
@@ -44,12 +44,12 @@ public class UserInfo implements Serializable{
 	@Transient
 	private Collection <GrantedAuthorityImpl> authorities;
 
-	UserInfo(){
+	public UserInfo(){
 		
 	}
 	
 	public UserInfo(String userId,String userName){
-		this.userId="";
+		this.userId=userId;
 		this.userName=userName;
 		this.password="";
 		
