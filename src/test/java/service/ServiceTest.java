@@ -7,11 +7,9 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.ssh.sys.po.RoleInfo;
 import com.ssh.sys.po.UserInfo;
 import com.ssh.sys.po.UserRole;
 import com.ssh.sys.service.UserInfoService;
-import com.ssh.sys.service.UserRoleService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"classpath:spring-hibernate.xml"})
