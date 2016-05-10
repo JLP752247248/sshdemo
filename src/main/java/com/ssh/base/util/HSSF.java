@@ -1,5 +1,6 @@
 package com.ssh.base.util;
 
+import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -13,7 +14,10 @@ import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hssf.util.HSSFColor;
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.junit.Test;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -28,8 +32,7 @@ public class HSSF {
 	 * @param request
 	 * @param response
 	 */
-	@RequestMapping(value = "/excels", method = RequestMethod.POST)
-	public void exportToExcel(HttpServletRequest request,
+	/*public void exportToExcel(HttpServletRequest request,
 			HttpServletResponse response) {
 		response.reset();
 		response.setContentType("application/vnd.ms-excel;charset=utf-8");
@@ -48,8 +51,18 @@ public class HSSF {
 				e.printStackTrace();
 			}
 		}
-	}
+	}*/
 	
+	@Test
+	public void writeToExcel(){
+		try {
+			XSSFWorkbook workbook = new XSSFWorkbook();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 	
 	//把formDataModel写入一个excel中
 	private HSSFWorkbook exportToExcel(String json) {
@@ -68,7 +81,7 @@ public class HSSF {
 		
 		return workbook;
 	}
-	//写入formDataModel中的表头或表数据，exportToExcel方法用到
+	/*//写入formDataModel中的表头或表数据，exportToExcel方法用到
 	private int addLines(HSSFSheet sheet, AbstractCTableBody absbody,
 			int startIndex, HSSFCellStyle cellStyle) {
 		Row row = null;
@@ -101,5 +114,5 @@ public class HSSF {
 			endIndex++;
 		}
 		return endIndex;
-	}
+	}*/
 }
