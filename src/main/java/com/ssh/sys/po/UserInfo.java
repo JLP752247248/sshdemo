@@ -67,6 +67,8 @@ public class UserInfo implements Serializable{
 
 
 	public List<UserRole> getUserRoleList() {
+		if(null==userRoleList)
+			userRoleList=new ArrayList<UserRole>();
 		return userRoleList;
 	}
 

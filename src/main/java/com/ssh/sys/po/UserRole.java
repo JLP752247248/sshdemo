@@ -21,7 +21,13 @@ public class UserRole {
 	/*@GenericGenerator(name="hibernate-uuid", strategy="uuid")  
     @GeneratedValue(generator="hibernate-uuid")*/  
 	private String userRoleId;
-	@ManyToOne(cascade={CascadeType.ALL})
+	@ManyToOne(cascade={CascadeType.MERGE})/*这里的merge，persist等和dao里面用的是对应的，
+	如果dao里面用save或者update等不标准的方法，这里级联将不起作用，但是当设置为all的时候却又都起作用。
+	For the save() operation to be cascaded, 
+	you need to enable CascadeType.SAVE_UPDATE, 
+	using the proprietary Hibernate Cascade annotation, 
+	since save() is not a standard JPA operation. 
+	Or you need to use the persist() method, and not the save() method.*/
 	@JoinColumn(name="userId")
 	@JSONField(serialize=false)
 	private UserInfo userInfo;
@@ -31,7 +37,24 @@ public class UserRole {
 	@JSONField(serialize=false)
 	private RoleInfo roleInfo;
 	
+	@Column(name="TEST")
+	private String test;
 	
+	
+	public UserRole() {
+	}
+	public UserRole(String urid, UserInfo user,String test) {
+		this.userRoleId=urid;
+		this.userInfo=user;
+		this.test=test;
+	}
+	
+	public String getTest() {
+		return test;
+	}
+	public void setTest(String test) {
+		this.test = test;
+	}
 	public String getUserRoleId() {
 		return userRoleId;
 	}

@@ -64,7 +64,7 @@ public class BaseDao<T extends Object,PK extends Serializable> extends Hibernate
 	 */
 	public Serializable saveNewObject(T o) {
         try {
-        	getHibernateTemplate().save(o);
+        	getHibernateTemplate().persist(o);//如果数据库已经存在，那么会抛出异常
             return 1;// .persist(o);//
         } catch (RuntimeException re) {
             log.error("save new object failed", re);
@@ -79,7 +79,7 @@ public class BaseDao<T extends Object,PK extends Serializable> extends Hibernate
 	 */
 	public void updateObject(T obj){
 		try {
-            getHibernateTemplate().update(obj);// .persist(o);//
+            getHibernateTemplate().merge(obj);// .persist(o);//
             // log.debug("save or update successful");
         } catch (RuntimeException re) {
             log.error("update failed", re);

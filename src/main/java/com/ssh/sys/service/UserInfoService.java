@@ -26,10 +26,12 @@ public class UserInfoService {
 	
 	@Transactional
 	public Serializable saveNewUserRole(UserRole ur){
-		
 		return urDao.saveNewObject(ur);
 	}
-	
+	@Transactional
+	public void saveUserRole(UserRole ur){
+		urDao.updateObject(ur);
+	}
 	@Transactional
 	public void deleteUserRole(UserRole ur){
 		 urDao.deleteObject(ur);

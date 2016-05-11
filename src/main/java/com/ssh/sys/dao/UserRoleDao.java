@@ -11,6 +11,11 @@ public class UserRoleDao  extends BaseDao<UserRole,String >{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
+	public void saveObject(UserRole ur) {
+		
+		
+	}
 	
 	
 
