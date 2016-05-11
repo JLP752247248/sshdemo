@@ -80,6 +80,13 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
   <servlet>
   	<servlet-name>WebUploadServlet</servlet-name>
   	<servlet-class>com.ssh.fileupload.servlet.WebUploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>ExportToExcel</display-name>
+  	<servlet-name>ExportToExcel</servlet-name>
+  	<servlet-class>com.ssh.fileupload.servlet.ExportToExcel</servlet-class>
   </servlet>  
   
   
@@ -90,6 +97,10 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
   <servlet-mapping>  
     <servlet-name>springMVC</servlet-name>  
     <url-pattern>/restfulapi/*</url-pattern>  
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ExportToExcel</servlet-name>
+  	<url-pattern>/ExportToExcel</url-pattern>
   </servlet-mapping>
     
   
