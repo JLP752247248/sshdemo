@@ -1,4 +1,4 @@
-package com.ssh.sys.dao;
+package com.panda.sys.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

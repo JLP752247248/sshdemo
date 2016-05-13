@@ -1,4 +1,4 @@
-package com.ssh.app.po;
+package com.panda.app.po;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

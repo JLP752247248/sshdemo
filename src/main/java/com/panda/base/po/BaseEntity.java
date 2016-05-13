@@ -1,4 +1,4 @@
-package com.ssh.base.po;
+package com.panda.base.po;
 
 public class BaseEntity {
 

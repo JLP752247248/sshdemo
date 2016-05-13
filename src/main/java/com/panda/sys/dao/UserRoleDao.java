@@ -1,4 +1,4 @@
-package com.ssh.sys.dao;
+package com.panda.sys.dao;
 
 import org.springframework.stereotype.Repository;
 

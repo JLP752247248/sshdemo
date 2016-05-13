@@ -1,4 +1,4 @@
-package com.ssh.base.util;
+package com.panda.base.util;
 
 public class PageInfo {
 	private int totalRows;
