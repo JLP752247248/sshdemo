@@ -35,7 +35,7 @@ $(document).ready(function(){
 	
 	
   /*$.ajax({
-	  url:"http://localhost:8080/ssh/restfulapi/mytest/",
+	  url:"http://localhost:8080/GientPanda/restfulapi/mytest/",
 	  type:"POST",
 	  contentType:'application/x-www-form-urlencoded',
 	  async:false,

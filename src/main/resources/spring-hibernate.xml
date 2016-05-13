@@ -52,7 +52,7 @@
       <property name="useTransactionAwareDataSource" value="true"></property>
       <property name="packagesToScan">
 			<list>
-				<value>com.ssh.*.po.**</value>
+				<value>com.panda.*.po.**</value>
 			</list>
 		</property>
     </bean>
@@ -65,7 +65,7 @@
 	</bean>
     
 
-	<context:component-scan base-package="com.ssh">
+	<context:component-scan base-package="com.panda">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
 	<context:annotation-config  />

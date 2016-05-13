@@ -79,14 +79,14 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
   </servlet>
   <servlet>
   	<servlet-name>WebUploadServlet</servlet-name>
-  	<servlet-class>com.ssh.fileupload.servlet.WebUploadServlet</servlet-class>
+  	<servlet-class>com.panda.fileupload.servlet.WebUploadServlet</servlet-class>
   </servlet>
   <servlet>
   	<description>
   	</description>
   	<display-name>ExportToExcel</display-name>
   	<servlet-name>ExportToExcel</servlet-name>
-  	<servlet-class>com.ssh.fileupload.servlet.ExportToExcel</servlet-class>
+  	<servlet-class>com.panda.fileupload.servlet.ExportToExcel</servlet-class>
   </servlet>  
   
   

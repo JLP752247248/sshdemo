@@ -5,7 +5,7 @@ model.config(['$httpProvider', function($httpProvider) {
 	//$httpProvider.defaults.headers.post['Accept'] = 'application/json';
 	}]);
 model.factory("myService1", ['Restangular', function(Restangular) {
-	 var UserList=Restangular.all("SSH/restfulapi/userinfoctrl");
+	 var UserList=Restangular.all("GientPanda/restfulapi/userinfoctrl");
 	 return UserList;
 }]);
 model.controller('TestController',['$scope','$timeout',"myService1","$http", function($scope,$timeout,myService1,$http){
